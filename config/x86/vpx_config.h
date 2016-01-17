@@ -26,7 +26,7 @@
 #define HAVE_SSE 1
 #define HAVE_SSE2 1
 #define HAVE_SSE3 1
-#define HAVE_SSSE3 1
+#define HAVE_SSSE3 0
 #define HAVE_SSE4_1 0
 #define HAVE_AVX 0
 #define HAVE_AVX2 0

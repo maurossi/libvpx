@@ -6,6 +6,8 @@ libvpx_target := config/x86
 
 libvpx_config_dir_x86 := $(LOCAL_PATH)/$(libvpx_target)
 libvpx_codec_srcs := $(sort $(shell cat $(libvpx_config_dir_x86)/libvpx_srcs.txt))
+libvpx_codec_srcs := $(filter-out %ssse3.c ,$(libvpx_codec_srcs))
+libvpx_codec_srcs := $(filter-out %ssse3.asm ,$(libvpx_codec_srcs))
 
 # vpx_config.c is an auto-generated file in $(libvpx_target).
 libvpx_codec_srcs_c_x86 := $(addprefix libvpx/, $(filter-out vpx_config.c, \
